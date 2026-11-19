@@ -7,7 +7,7 @@
   });
   const grid = document.getElementById('zoneGrid');
   const battleCard = document.querySelector('.zone[data-zone="battle"]');
-  if (battleCard) { battleCard.querySelector('strong').textContent='สนามต่อสู้ 3D'; battleCard.querySelector('span').textContent='ยิงเอาตัวรอด • มวย • ดาบ • AI'; }
+  if (battleCard) { battleCard.querySelector('strong').textContent='แบตเทิลรอยัล 3D'; battleCard.querySelector('span').textContent='วงปลอดภัย • เก็บของ • สู้ AI'; }
   if (grid) {
     if (!grid.querySelector('[data-zone="world3d"]')) grid.insertAdjacentHTML('beforeend','<button class="zone" data-zone="world3d" onclick="selectZone(\'world3d\',this)"><div class="zone-icon">🌄</div><strong>โลกกว้าง 3D</strong><span>แผนที่ 3D • สนามแข่ง/อู่รถ • ต่อสู้ AI</span></button>');
     if (!grid.querySelector('[data-zone="race3d"]')) grid.insertAdjacentHTML('beforeend','<button class="zone" data-zone="race3d" onclick="selectZone(\'race3d\',this)"><div class="zone-icon">🏎️</div><strong>ขับรถ / แข่ง 3D</strong><span>บังคับรถจริง • เร่ง • เบรก • เลี้ยว</span></button>');
@@ -19,7 +19,7 @@
     try {
       if (kind === 'world') {
         if (!window.nova3DWorld) await import('./nova-3d-world.js');
-        window.nova3DWorld.open(); appendRacePortal();
+        window.nova3DWorld.open(); if(kind==='world'&&currentZone==='battle')window.nova3DWorld.setZone('shooting'); appendRacePortal();
       } else if (kind === 'builder') {
         if (!window.nova3DBuilder) await import('./nova-3d-builder.js');
         window.nova3DBuilder.open();
