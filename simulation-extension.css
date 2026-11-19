@@ -1,0 +1,11 @@
+.city-action .city-extra{min-width:105px;background:#081712df;font-size:11px;padding:9px 10px}
+.city-action .city-extra:active{border-color:#caff92;color:#caff92}
+.friend-list{display:grid;gap:8px;margin-top:13px;max-height:45vh;overflow:auto}
+.friend-item{display:flex;align-items:center;gap:9px;border:1px solid #ffffff20;border-radius:13px;padding:9px;background:#0b1713}
+.friend-avatar{width:40px;height:40px;display:grid;place-items:center;border-radius:50%;background:#2a453c;font-size:21px;flex:none}
+.friend-copy{flex:1;min-width:0}.friend-copy strong{display:block;font-size:12px}.friend-copy small{display:block;color:#aebdb2;font-size:9px;margin-top:2px}
+.friend-item button{width:auto;min-width:90px;margin:0;padding:8px 9px;font-size:10px;white-space:nowrap}.friend-item button:disabled{opacity:.7;background:#314337;color:#d9e5d9}
+.vehicle-colors{display:flex;gap:9px;flex-wrap:wrap;margin:15px 0 11px}.vehicle-swatch{width:36px;height:36px;border:3px solid #ffffff44;border-radius:50%;padding:0;cursor:pointer}.vehicle-swatch.active{outline:2px solid #eaffd5;outline-offset:2px}
+.vehicle-label{color:#bdd0c1;font-size:10px;margin-top:5px}.city-popup .vehicle-drive{margin-top:4px}
+@media(max-width:390px){.city-action .city-extra{min-width:97px;padding:8px 8px;font-size:10px}.friend-item button{min-width:80px;padding:8px 6px}}
+.vehicle-models{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:13px 0 8px}.vehicle-model{width:auto!important;margin:0!important;padding:8px 5px!important;border:1px solid #ffffff28!important;border-radius:10px!important;background:#0b1713!important;color:#d6e2d8!important;font-size:9px!important}.vehicle-model.active{border-color:#b9ff64!important;color:#b9ff64!important;background:#1a2a20!important}
