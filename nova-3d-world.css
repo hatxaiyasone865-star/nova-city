@@ -81,3 +81,9 @@
 .n3d-hud-toggle-list input{width:16px;height:16px;flex:none;accent-color:#caff70}
 .n3d-shell .hud-user-hidden{display:none!important}
 @media(max-width:360px){.n3d-hud-toggle-list{grid-template-columns:1fr}.n3d-hud-toggle-list>b{grid-column:1}}
+/* Dedicated right-thumb camera-look area; action buttons remain above it. */
+.n3d-look-area{position:absolute;z-index:2;right:0;top:calc(126px + env(safe-area-inset-top));bottom:calc(130px + env(safe-area-inset-bottom));width:52%;background:transparent;pointer-events:auto;touch-action:none;user-select:none;-webkit-user-select:none}
+.n3d-look-area span{position:absolute;right:12px;top:47%;padding:5px 8px;border:1px solid #efffe82b;border-radius:9px;background:#07140f55;color:#edffe4b0;font:800 8px system-ui,'Noto Sans Thai',sans-serif;pointer-events:none;transition:opacity .2s}
+.n3d-look-area span[hidden]{display:none}
+.n3d-action.attack.active{transform:none;filter:brightness(1.08)}
+@media(max-width:390px){.n3d-look-area{top:calc(126px + env(safe-area-inset-top));bottom:calc(124px + env(safe-area-inset-bottom));width:55%}}
