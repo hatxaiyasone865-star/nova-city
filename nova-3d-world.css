@@ -47,3 +47,15 @@
 
 .n3d-mission-screen{position:absolute;inset:0;z-index:20;display:grid;place-items:center;background:#020a09b8;padding:14px;backdrop-filter:blur(5px)}.n3d-mission-screen[hidden]{display:none}.n3d-mission-card{width:min(440px,94vw);max-height:88vh;overflow:auto;border:1px solid #caff78a8;border-radius:19px;background:linear-gradient(155deg,#172722f7,#0a1212fa);padding:17px;box-shadow:0 14px 44px #0009;color:#f6ffe9}.n3d-mission-card>b{font-size:18px}.n3d-mission-card p{font-size:12px;color:#d2dfd1;line-height:1.45;margin:7px 0 12px}.n3d-mission-row,.n3d-mission-grid{display:grid;gap:7px}.n3d-mission-row{grid-template-columns:repeat(3,1fr)}.n3d-mission-grid{grid-template-columns:repeat(2,1fr);margin-top:8px}.n3d-mission-row button,.n3d-mission-grid button,.n3d-mission-start,.n3d-mission-continue{min-height:42px;border:1px solid #caff7866;border-radius:11px;background:#172622;color:#f6ffe9;font:800 11px system-ui,'Noto Sans Thai',sans-serif;padding:8px}.n3d-mission-row button.selected,.n3d-mission-grid button.selected{background:#caff78;color:#16210f;border-color:#caff78}.n3d-mission-info{font-size:11px!important;margin:10px 0!important;color:#e4f1ce!important}.n3d-mission-start{width:100%;background:#caff78;color:#17240f;font-size:13px;margin-top:2px}.n3d-mission-continue{width:100%;margin-top:6px;background:#263635}.n3d-mission-continue[hidden]{display:none}@media(max-height:650px){.n3d-mission-card{padding:12px}.n3d-mission-card p{margin:5px 0 8px;font-size:10px}.n3d-mission-row button,.n3d-mission-grid button{min-height:36px;padding:6px}}
 .n3d-zones{display:flex;flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch}.n3d-zones::-webkit-scrollbar{display:none}.n3d-zones>button{flex:0 0 auto}
+
+/* Battle-royale weapon picker and direct fire controls for touch screens. */
+.n3d-quick-weapons{position:absolute;z-index:5;top:calc(163px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);display:flex;gap:5px;max-width:min(94vw,620px);overflow-x:auto;padding:4px 5px;border:1px solid #d8ffe533;border-radius:14px;background:#081712d9;backdrop-filter:blur(8px);pointer-events:auto;scrollbar-width:none}
+.n3d-quick-weapons[hidden]{display:none}
+.n3d-quick-weapons::-webkit-scrollbar{display:none}
+.n3d-quick-weapon{flex:0 0 auto;min-width:66px;max-width:94px;min-height:40px;padding:5px 7px;border:1px solid #eaffdf4c;border-radius:10px;background:#183127;color:#f7fff2;text-align:center;font:850 9px system-ui,'Noto Sans Thai',sans-serif;touch-action:manipulation}
+.n3d-quick-weapon b,.n3d-quick-weapon small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.n3d-quick-weapon small{margin-top:2px;color:#d5e5d2;font-size:8px}
+.n3d-quick-weapon.active{background:#caff78;color:#17230f;border-color:#f0ffd8}
+.n3d-quick-weapon.active small{color:#30432a}
+.n3d-action.small[hidden]{display:none}
+@media(max-width:390px){.n3d-quick-weapons{top:calc(163px + env(safe-area-inset-top));max-width:96vw;gap:3px}.n3d-quick-weapon{min-width:58px;max-width:76px;padding:4px 5px;font-size:8px}}
