@@ -59,3 +59,25 @@
 .n3d-quick-weapon.active small{color:#30432a}
 .n3d-action.small[hidden]{display:none}
 @media(max-width:390px){.n3d-quick-weapons{top:calc(163px + env(safe-area-inset-top));max-width:96vw;gap:3px}.n3d-quick-weapon{min-width:58px;max-width:76px;padding:4px 5px;font-size:8px}}
+
+/* Player-adjustable HUD controls */
+.n3d-shell{--n3d-hud-scale:1.3;--n3d-hud-opacity:1}
+.n3d-joystick,.n3d-action-grid,.n3d-aim-controls,.n3d-quick-weapons{scale:var(--n3d-hud-scale);opacity:var(--n3d-hud-opacity)}
+.n3d-joystick{transform-origin:left bottom}.n3d-action-grid{transform-origin:right bottom}.n3d-aim-controls{transform-origin:right bottom}.n3d-quick-weapons{transform-origin:center top}
+.n3d-hud-edit-bar[hidden],.n3d-settings-back[hidden]{display:none!important}
+.n3d-edit-hud .n3d-joystick,.n3d-edit-hud .n3d-action-grid,.n3d-edit-hud .n3d-aim-controls,.n3d-edit-hud .n3d-quick-weapons{outline:2px dashed #d8ff71;outline-offset:4px;cursor:grab;touch-action:none;filter:drop-shadow(0 0 10px #cbff6a70)}
+.n3d-edit-hud .hud-dragging{cursor:grabbing;outline-style:solid}
+.n3d-hud-edit-bar{position:absolute;z-index:35;left:50%;top:calc(72px + env(safe-area-inset-top));transform:translateX(-50%);width:min(94vw,520px);display:flex;align-items:center;justify-content:space-between;gap:9px;padding:8px 10px;border:1px solid #d6ff7790;border-radius:10px;background:#101a12ed;color:#eaffc8;box-shadow:0 8px 24px #0008;font-size:9px;font-weight:800;pointer-events:auto}.n3d-hud-edit-bar button{flex:none;border:0;border-radius:7px;background:#d1ff76;color:#15200f;padding:8px 10px;font-size:9px;font-weight:950}
+.n3d-settings-back{position:absolute;z-index:32;inset:0;display:grid;place-items:center;padding:calc(16px + env(safe-area-inset-top)) 14px calc(16px + env(safe-area-inset-bottom));background:#030805c9;backdrop-filter:blur(7px);pointer-events:auto;touch-action:auto}
+.n3d-settings-card{width:min(100%,440px);border:1px solid #d2ff7655;border-radius:17px;background:linear-gradient(155deg,#19271d,#0b120e);padding:18px;color:#f1f5e8;box-shadow:0 22px 72px #000b}
+.n3d-settings-card header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.n3d-settings-card header small{color:#cfff72;font-size:8px;font-weight:950;letter-spacing:.17em}.n3d-settings-card h2{margin:4px 0 0;font-size:18px}.n3d-settings-card header button{width:34px;height:34px;border:1px solid #ffffff24;border-radius:50%;background:#ffffff08;color:#f0f4e9;font-size:21px}
+.n3d-setting-row{display:block;margin:14px 0}.n3d-setting-row>span{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px}.n3d-setting-row b{font-size:11px}.n3d-setting-row output{color:#d7ff8a;font-size:10px;font-weight:900}.n3d-setting-row input{display:block;width:100%;accent-color:#caff70;height:24px;touch-action:pan-x}
+.n3d-setting-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:15px}.n3d-setting-actions button{min-height:42px;border:1px solid #caff7044;border-radius:9px;background:#caff7013;color:#e7f5d4;font-size:10px;font-weight:900}.n3d-setting-actions button:first-child{background:#d1ff76;color:#15200f;border-color:#e5ffad}.n3d-settings-card>p{margin:12px 0 0;color:#9eac97;font-size:9px;line-height:1.55}
+@media(max-width:390px){.n3d-hud-edit-bar{top:calc(64px + env(safe-area-inset-top));font-size:8px}.n3d-hud-edit-bar button{padding:7px;font-size:8px}}
+.n3d-settings-card{max-height:calc(100dvh - 36px - env(safe-area-inset-top) - env(safe-area-inset-bottom));overflow:auto;overscroll-behavior:contain}
+.n3d-hud-toggle-list{display:grid;grid-template-columns:1fr 1fr;gap:6px 10px;margin:15px 0 6px;padding:11px;border:1px solid #ffffff1c;border-radius:10px;background:#ffffff06}
+.n3d-hud-toggle-list>b{grid-column:1/-1;margin-bottom:2px;color:#d9e6cd;font-size:10px}
+.n3d-hud-toggle-list label{display:flex;align-items:center;gap:7px;min-height:29px;margin:0;color:#bfcbb8;font-size:9px;line-height:1.35}
+.n3d-hud-toggle-list input{width:16px;height:16px;flex:none;accent-color:#caff70}
+.n3d-shell .hud-user-hidden{display:none!important}
+@media(max-width:360px){.n3d-hud-toggle-list{grid-template-columns:1fr}.n3d-hud-toggle-list>b{grid-column:1}}
