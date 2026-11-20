@@ -19,7 +19,7 @@
     try {
       if (kind === 'world') {
         if (!window.nova3DWorld) await import('./nova-3d-world.js');
-        window.nova3DWorld.open(); if(kind==='world'&&currentZone==='battle')window.nova3DWorld.setZone('shooting'); appendRacePortal();
+        window.nova3DWorld.open(); if(kind==='world'&&currentZone==='battle'){window.nova3DWorld.setZone('shooting');let lobbyMission=null;try{lobbyMission=localStorage.getItem('novaLobbyMission');localStorage.removeItem('novaLobbyMission');}catch(_){}if(['survival','loot'].includes(lobbyMission))window.nova3DWorld.launchMission(lobbyMission);} appendRacePortal();
       } else if (kind === 'builder') {
         if (!window.nova3DBuilder) await import('./nova-3d-builder.js');
         window.nova3DBuilder.open();

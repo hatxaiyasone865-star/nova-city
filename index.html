@@ -50,8 +50,29 @@
   <link rel="stylesheet" href="./simulation-extension.css">
   <link rel="stylesheet" href="./royale.css">
   <link rel="stylesheet" href="./nova-integrated.css">
+  <link rel="stylesheet" href="./nova-front.css">
 </head>
 <body>
+  <section class="nova-front" id="novaFront" aria-label="เมนู NOVA CITY">
+    <header class="front-topbar"><a class="front-brand" href="#" aria-label="NOVA CITY"><span class="front-mark">N</span><span>NOVA CITY<small>FRONTIER PROTOCOL</small></span></a><div class="front-status"><i></i> SOLO • AI SIMULATION</div><button class="front-legacy" type="button" id="frontLegacy">เมนูคลาสสิก</button></header>
+    <main class="front-main">
+      <section class="front-view" id="frontHome">
+        <div class="front-hero"><div class="front-hero-copy"><p class="front-kicker"><span>SEASON 01</span> • THE LAST LIGHT</p><h1>ขอบฟ้าใหม่<br><em>เริ่มที่คุณ</em></h1><p class="front-description">เมือง NOVA กำลังเปลี่ยนไป เลือกเส้นทางของคุณ เตรียมอุปกรณ์ แล้วลงสนามร่วมกับทีม AI</p><button class="front-primary" id="frontChooseMode">เลือกโหมดและเตรียมทีม <b>↗</b></button><div class="front-hero-foot"><span class="front-live-dot"></span> ระบบพร้อม <span class="front-divider">/</span> เล่นออฟไลน์กับ AI</div></div><div class="front-operator" aria-hidden="true"><div class="operator-halo"></div><div class="operator-shadow"></div><div class="operator-legs"><i></i><i></i></div><div class="operator-torso"><i class="operator-vest"></i><i class="operator-arm left"></i><i class="operator-arm right"></i></div><div class="operator-neck"></div><div class="operator-head"><i class="operator-visor"></i></div><span class="operator-mark">N</span></div><div class="front-map-stamp"><b>01 / NOVA SHORE</b><span>ชายฝั่ง • เขตฝึกจำลอง</span></div></div>
+        <div class="front-bottom"><div class="front-section-title"><div><span>เลือกสนามรบ</span><small>เลือกโหมดก่อนจัดทีม</small></div><span class="front-count">03 MODES</span></div><div class="front-mode-row">
+          <button class="front-mode selected" data-front-mode="survival"><span class="mode-icon">◉</span><span><b>เอาตัวรอด</b><small>วงปลอดภัย • AI • 8 ศัตรู</small></span><i>เลือกแล้ว</i></button>
+          <button class="front-mode" data-front-mode="loot"><span class="mode-icon">▣</span><span><b>ล่าเสบียง</b><small>ค้นของ • ทำภารกิจแข่งเวลา</small></span><i>เลือก</i></button>
+          <button class="front-mode" data-front-mode="world3d"><span class="mode-icon">⌖</span><span><b>สำรวจ NOVA</b><small>โลก 3D • เดินทางได้อิสระ</small></span><i>เลือก</i></button>
+        </div><div class="front-disclaimer">ต้นแบบเล่นคนเดียว • ทีมและศัตรูเป็น AI จำลอง • ยังไม่มีผู้เล่นออนไลน์</div></div>
+      </section>
+      <section class="front-view front-lobby" id="frontLobby" hidden>
+        <div class="lobby-heading"><button class="front-back" id="frontBack">← กลับเลือกโหมด</button><div><p class="front-kicker">PRE-MATCH LOBBY / 01</p><h2>เตรียมทีมก่อนลงสนาม</h2></div><span class="lobby-ready"><i></i> พร้อมเริ่ม</span></div>
+        <div class="lobby-layout"><div class="lobby-map"><div class="lobby-map-bg"></div><div class="map-grid"></div><div class="map-coords">N 18° 04' • E 102° 37'</div><div class="map-details"><span class="map-tag">แผนที่จำลอง</span><h3 id="lobbyMapTitle">NOVA SHORE</h3><p id="lobbyMapSub">เขตชายฝั่ง • พื้นที่เอาตัวรอด</p></div><div class="map-pin">N</div><div class="map-ring"></div><div class="map-route"></div></div>
+          <aside class="lobby-side"><div class="lobby-card-title"><div><span>OPERATOR</span><h3>ตัวละครของคุณ</h3></div><span class="lobby-count">01 / 04</span></div><div class="lobby-operator-card"><div class="lobby-avatar"><span id="lobbyAvatarInitial">N</span></div><div><b id="lobbyCharacterName">NOVA RANGER</b><small>หน่วยลาดตระเวน • ระดับ 01</small></div><span class="lobby-badge">SELECTED</span></div><div class="lobby-char-list" id="lobbyCharList" aria-label="เลือกตัวละคร"></div><div class="lobby-squad"><div><span>ทีมปฏิบัติการ</span><small>สมาชิก AI จะร่วมทีมจำลอง</small></div><div class="squad-slots"><i class="squad-self">N</i><i>AI</i><i>AI</i><i>AI</i></div></div><div class="lobby-mode-summary"><span>โหมดที่เลือก</span><b id="lobbyModeName">เอาตัวรอด • SOLO</b></div><button class="front-deploy" id="frontDeploy"><span>พร้อมแล้ว • ลงสนาม</span><b>→</b></button><p class="lobby-disclaimer">เล่นคนเดียวกับ AI • ไม่มีการแข่งขันออนไลน์จริง</p></aside>
+        </div>
+      </section>
+    </main>
+    <footer class="front-footer"><span>NOVA CITY <i>•</i> ORIGINAL BATTLE EXPERIENCE</span><span>ทิศทางใหม่ เริ่มต้นได้ทุกครั้ง</span></footer>
+  </section>
   <main class="wrap">
     <header class="topbar">
       <div class="brand"><div class="brand-mark">N</div><div>NOVA CITY<small>LIVE YOUR STORY</small></div></div>
@@ -264,6 +285,7 @@ renderCharacterChoices();
     function toast(text){const el=document.getElementById('toast');el.textContent=text;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),2400)}
     document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
   </script>
+  <script src="./nova-front.js"></script>
   <script src="./extra-gameplay.js"></script>
   <script src="./simulation-extension.js"></script>
   <script src="./royale.js"></script>
