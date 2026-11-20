@@ -87,3 +87,6 @@
 .n3d-look-area span[hidden]{display:none}
 .n3d-action.attack.active{transform:none;filter:brightness(1.08)}
 @media(max-width:390px){.n3d-look-area{top:calc(126px + env(safe-area-inset-top));bottom:calc(124px + env(safe-area-inset-bottom));width:55%}}
+.n3d-edit-hud .n3d-action-grid,.n3d-edit-hud .n3d-aim-controls,.n3d-edit-hud .n3d-quick-weapons{outline:0;filter:none}
+.n3d-edit-hud [data-hud-move-id]{outline:2px dashed #d8ff71;outline-offset:3px;cursor:grab;touch-action:none;filter:drop-shadow(0 0 8px #cbff6a70)}
+.n3d-edit-hud [data-hud-move-id].hud-dragging{outline-style:solid;cursor:grabbing}
